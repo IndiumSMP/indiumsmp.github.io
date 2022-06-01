@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Indium SMP</title>
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <style>
+            /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+                scrollbar-width: auto;
+                scrollbar-color: #262729 #333538;
+            }
+
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+                width: 16px;
+            }
+
+            *::-webkit-scrollbar-track {
+                background: #333538;
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background-color: #262729;
+                border-radius: 10px;
+                border: 3px solid #333538;
+            }
+            html, body{
+                margin: 0;
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+            }
+            .parallax {
+                background-image: url("background.jpg");
+                min-height: 100vh; 
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .header {
+                padding: 10px 16px;
+                background: #262729;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .content{
+                padding: 15px;
+                padding-bottom: 100px;
+                background-color:#333538;
+                font-size:36px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parallax"></div>
+
+        <div class="header" id="myHeader">
+            <h2>Indium SMP</h2>
+        </div>
+
+        <div class="content">
+            <h2>Welcome To Indium SMP</h2>
+            <p style="text-indent: 50px;">Indium SMP is a Survival Multiplayer Minecraft Java Edition server. It is the combination of two pre-existing SMP's: Onyx SMP and Whitelist SMP. Indium starts June 18th, so get ready! Find additonal links below.</p>
+        </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
+    </body>
+</html>
