@@ -6,13 +6,15 @@
         <link rel="shortcut icon" href="logo.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
         <style>
             /* ===== Scrollbar CSS ===== */
             /* Firefox */
             * {
                 scrollbar-width: auto;
-                scrollbar-color: #262729 #333538;
+                scrollbar-color: #1E1F21 #333538;
             }
 
             /* Chrome, Edge, and Safari */
@@ -25,7 +27,7 @@
             }
 
             *::-webkit-scrollbar-thumb {
-                background-color: #262729;
+                background-color: #1E1F21;
                 border-radius: 10px;
                 border: 3px solid #333538;
             }
@@ -35,21 +37,12 @@
                 color: white;
             }
             .parallax {
-                background-image: url("background.jpg");
-                min-height: 100vh; 
+                background-image: url("background.png");
+                min-height: 90vh; 
                 background-attachment: fixed;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-            }
-            .header {
-                padding: 10px 16px;
-                background: #262729;
-            }
-            .sticky {
-                position: fixed;
-                top: 0;
-                width: 100%;
             }
             .content{
                 padding: 15px;
@@ -58,103 +51,109 @@
                 font-size:36px;
             }
 
-            .links{
-                display: flex;
+            .titlerectangle {
+                width: 50vw;
+                height: 30vh;
+                background: rgba(46,69,130,1);
+                opacity: 1;
+                position: absolute;
+                top: 20vh;
+                left: 0px;
+                overflow: hidden;
+                padding-left: 20px;
             }
 
-            /* CSS */
-            .button-19 {
-                
-                appearance: button;
-                background-color: #1899D6;
-                border: solid transparent;
-                border-radius: 16px;
-                border-width: 0 0 4px;
-                box-sizing: border-box;
-                color: #FFFFFF;
-                cursor: pointer;
-                display: inline-block;
-                font-family: din-round,sans-serif;
-                font-size: 15px;
-                font-weight: 700;
-                letter-spacing: .8px;
-                line-height: 20px;
+            .titletease{
+                color: rgba(255,255,255,1);
                 margin: 0;
-                outline: none;
-                overflow: visible;
-                padding: 13px 16px;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+                font-size: 86px;
+                font-family: Montserrat;
+            }
+
+            .titleteasesubtitle{
+                color: rgba(255,255,255,1);
+                margin: 0;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+                font-size: 36px;
+                font-family: Montserrat;
+                font-weight: 100;
+            }
+
+            .biglogo {
+                width: 35vw;
+                height: 35vw;
+                background: url("logo.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 6vh;
+                right: 10vw;
+            }
+
+            .showcase{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .button{
+                background-color: #1A8FDD;
+                border: none;
+                color: white;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                width: 20vw;
+                margin-top: 5vh;
+                margin-bottom: 10vh;
                 text-align: center;
-                text-transform: uppercase;
-                touch-action: manipulation;
-                transform: translateZ(0);
-                transition: filter .2s;
-                user-select: none;
-                -webkit-user-select: none;
-                vertical-align: middle;
-                white-space: nowrap;
-                width: 50%;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 36px;
+                font-weight: 200;
+                cursor: pointer;
             }
 
-            .button-19:after {
-            background-clip: padding-box;
-            background-color: #1CB0F6;
-            border: solid transparent;
-            border-radius: 16px;
-            border-width: 0 0 4px;
-            bottom: -4px;
-            content: "";
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: -1;
-            }
-
-            .button-19:main,
-            .button-19:focus {
-            user-select: auto;
-            }
-
-            .button-19:hover:not(:disabled) {
-            filter: brightness(1.1);
-            -webkit-filter: brightness(1.1);
-            }
-
-            .button-19:disabled {
-            cursor: auto;
+            .footer{
+                padding: 15px;
+                padding-bottom: 50px;
+                background-color:#1E1F21;
+                font-size:36px;
             }
         </style>
     </head>
     <body>
-        <div class="parallax"></div>
+        <div class="parallax">
+            <div class="biglogo">
 
-        <div class="header" id="myHeader">
-            <h2>Indium SMP</h2>
+            </div>
+            <div class="titlerectangle">
+                <h1 class="titletease">A Server Like No Other</h1>
+                <p class="titleteasesubtitle">Dozens of new custom features</p>
+            </div>
         </div>
+
+        <img class="showcase" src="showcase.png" alt="beeg image">
 
         <div class="content">
-            <h2>Welcome To Indium SMP</h2>
-            <p style="text-indent: 50px;">Indium SMP is a Survival Multiplayer Minecraft Java Edition server. It is the combination of two pre-existing SMP's: Onyx SMP and Whitelist SMP. Indium starts June 18th, so get ready! Find additonal links below.</p>
-            <div class="links">
-                <a href="http://discord.indiumsmp.net/" class="button-19" role="button">Discord</a>
-                <a href="https://wiki.indiumsmp.net/" class="button-19" role="button">Wiki</a>
-                <a href="herotranslator.html" class="button-19" role="button">Hero Translator</a>
-            </div>
-            
+            <center style="padding-top: 10vh;">
+                <h1 class="titletease">Join Today</h1>
+                <a class="button" href="https://discord.indiumsmp.net/">Discord</a>
+                <h1 class="titletease">Or Check What's In Store</h1>
+                <a class="button" href="https://wiki.indiumsmp.net/">Wiki</a>
+                <h1 class="titletease">Or Even Look At THE Store</h1>
+                <a class="button" href="https://zombienw.com/store">Merch</a>
+            </center>
         </div>
-        <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-            
-            function myFunction() {
-              if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-              } else {
-                header.classList.remove("sticky");
-              }
-            }
-        </script>
+
+        <div class="footer">
+            <center>
+                <h1 class="titletease">Indium SMP</h1>
+                <p class="titleteasesubtitle">2022/2023</p>
+                <p>normally you’d put like a twitter link here but we dont have one</p>
+            </center>
+        </div>
     </body>
 </html>
